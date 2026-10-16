@@ -20,9 +20,7 @@ public class ClyclesDetectionStatisticsUI implements StatisticsUI {
     
     private int position = 1000;
     private String displayName = "Cycles Detection";
-    private String shortDescription = "This statistics evaluate the distribution by size of closed cycles in the active graph";
-
-    private CyclesDetectionStatistics sts;
+    private String shortDescription = "Counts DFS back-edge witnesses by length in the visible graph";
     
     /*
      * No need of setting panes
@@ -34,7 +32,6 @@ public class ClyclesDetectionStatisticsUI implements StatisticsUI {
 
     @Override
     public void setup(Statistics ststcs) {
-    this.sts = (CyclesDetectionStatistics)ststcs;
     }
 
     @Override
@@ -45,13 +42,17 @@ public class ClyclesDetectionStatisticsUI implements StatisticsUI {
         return CyclesDetectionStatistics.class;
     }
 
-    /**
-     * TODO: define return value from the Statistics
-     * @return 
-     */
     @Override
+    @Deprecated
     public String getValue() {
-       return sts.getResults();
+        return "";
+    }
+
+    @Override
+    public String getValue(Statistics statistics) {
+        return statistics instanceof CyclesDetectionStatistics
+                ? ((CyclesDetectionStatistics) statistics).getResults()
+                : "";
     }
 
     @Override

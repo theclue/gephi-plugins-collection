@@ -208,6 +208,23 @@ pip-log.txt
 .coverage
 .tox
 
+# Autotools generated files
+/Makefile
+/Makefile.in
+/aclocal.m4
+/autom4te.cache/
+/config.guess
+/config.log
+/config.status
+/config.sub
+/configure
+/depcomp
+/install-sh
+/missing
+
+# Maven build output
+/GraphCyclesDetection/target/
+
 #Translations
 *.mo
 
