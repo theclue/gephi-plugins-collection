@@ -1,0 +1,19 @@
+version: 2
+updates:
+  - package-ecosystem: maven
+    directory: /GraphCyclesDetection
+    schedule:
+      interval: daily
+    cooldown:
+      default-days: 8
+    groups:
+      maven:
+        patterns: ["*"]
+        update-types: [minor, patch]
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: daily
+    cooldown:
+      default-days: 8
