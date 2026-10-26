@@ -9,6 +9,8 @@ updates:
     groups:
       maven:
         patterns: ["*"]
+        # NetBeans RELEASE versions are not SemVer; review them separately.
+        exclude-patterns: ["org.netbeans.api:*"]
         update-types: [minor, patch]
 
   - package-ecosystem: github-actions
