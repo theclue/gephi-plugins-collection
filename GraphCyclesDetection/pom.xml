@@ -14,7 +14,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <test.java.executable>${java.home}/bin/java</test.java.executable>
-        <netbeans.version>RELEASE290</netbeans.version>
+        <netbeans.version>RELEASE310</netbeans.version>
     </properties>
     <dependencies>
         <dependency>
